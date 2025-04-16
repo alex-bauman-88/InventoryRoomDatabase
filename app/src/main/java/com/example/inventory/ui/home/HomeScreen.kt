@@ -123,7 +123,7 @@ private fun HomeBody(
         } else {
             InventoryList(
                 itemList = itemList,
-                onItemClick = { onItemClick(it.id) },
+                onItemClick = { onItemClick(it.id) }, //
                 contentPadding = contentPadding,
                 modifier = Modifier.padding(horizontal = dimensionResource(id = R.dimen.padding_small))
             )
