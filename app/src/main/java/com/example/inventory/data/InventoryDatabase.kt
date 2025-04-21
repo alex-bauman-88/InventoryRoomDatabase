@@ -6,7 +6,11 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 
 // database holder
-
+/**
+ * Database class with a singleton Instance object.
+ *
+ * Your ViewModels interact with the database via the DAO and provide data to the UI.
+ */
 @Database(entities = [Item::class], version = 1, exportSchema = false)
 abstract class InventoryDatabase : RoomDatabase() {
 
