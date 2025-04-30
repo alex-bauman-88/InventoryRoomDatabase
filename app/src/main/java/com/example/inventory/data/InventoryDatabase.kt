@@ -18,8 +18,10 @@ abstract class InventoryDatabase : RoomDatabase() {
 
     /**The value of a volatile variable is never cached, and all reads and writes are to and from the main memory. These features help ensure the value of Instance is always up to date and is the same for all execution threads. It means that changes made by one thread to Instance are immediately visible to all other threads.*/
     companion object {
+
         @Volatile
         private var Instance: InventoryDatabase? = null
+
         fun getDatabase(context: Context): InventoryDatabase {
 
             /** Multiple threads can potentially ask for a database instance at the same time,
